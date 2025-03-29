@@ -20,45 +20,12 @@ Listado de pedidos por cliente.
 
 🛒 Tabla: Pedidos
 
-CREATE TABLE Pedidos (
-    IdPedido INT PRIMARY KEY IDENTITY,
-    IdCliente INT,
-    FechaPedido DATETIME DEFAULT GETDATE(),
-    IdEstado INT DEFAULT 1, -- 1 = Pendiente
-    Total DECIMAL(10,2) DEFAULT 0
-);
-
 📑 Tabla: DetallePedidos
-
-CREATE TABLE DetallePedidos (
-    IdDetalle INT PRIMARY KEY IDENTITY,
-    IdPedido INT,
-    IdProducto INT,
-    Cantidad INT,
-    PrecioUnitario DECIMAL(10,2),
-    FOREIGN KEY (IdPedido) REFERENCES Pedidos(IdPedido),
-    FOREIGN KEY (IdProducto) REFERENCES Productos(IdProducto)
-);
 
 🛍️ Tabla: Productos
 
-CREATE TABLE Productos (
-    IdProducto INT PRIMARY KEY IDENTITY,
-    Nombre NVARCHAR(100),
-    Precio DECIMAL(10,2),
-    Stock INT,
-    Descripcion NVARCHAR(255)
-);
-
 👤 Tabla: Clientes
 
-CREATE TABLE Clientes (
-    IdCliente INT PRIMARY KEY IDENTITY,
-    Nombre NVARCHAR(100),
-    Email NVARCHAR(100),
-    Telefono NVARCHAR(20),
-    Direccion NVARCHAR(255)
-);
 
 🛠️ Procedimientos Almacenados
 
@@ -88,6 +55,3 @@ Actualizar el estado del pedido.
 
 Intentar registrar una compra sin stock disponible.
 
-📝 Licencia
-
-Este proyecto es de código abierto y puedes modificarlo libremente. 🚀
