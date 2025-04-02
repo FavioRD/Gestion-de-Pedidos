@@ -1,8 +1,8 @@
-#📦 Sistema de Gestión de Pedidos con SQL Server
+📦 Sistema de Gestión de Pedidos con SQL Server
 
 Este proyecto implementa un sistema de gestión de pedidos utilizando SQL Server, con procedimientos almacenados para registrar pedidos, gestionar detalles, actualizar stock y cambiar el estado de los pedidos.
 
-##🚀 Características
+🚀 Características
 
 Registro de pedidos con múltiples productos en formato JSON.
 
